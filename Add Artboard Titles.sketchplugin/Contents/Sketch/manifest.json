@@ -1,0 +1,26 @@
+{
+  "name": "Add Artboard Titles",
+  "version": "0.0.1",
+  "description": "Add titles above your Sketch Artboards",
+  "license": "MIT",
+  "author": "Lim Yuan Qing",
+  "homepage": "https://github.com/yuanqing/sketch-add-artboard-titles",
+  "identifier": "yuanqing.add-artboard-titles",
+  "compatibleVersion": "52.3",
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "Add Artboard Titles",
+      "identifier": "add-artboard-titles",
+      "description": "Add titles above your Artboards",
+      "script": "add-artboard-titles.js",
+      "shortcut": "ctrl option cmd t"
+    }
+  ],
+  "menu": {
+    "isRoot": true,
+    "items": [
+      "add-artboard-titles"
+    ]
+  }
+}
