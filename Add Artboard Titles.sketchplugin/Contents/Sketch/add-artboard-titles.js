@@ -5,8 +5,8 @@ function createArtboardTitles (artboardLayers) {
   group.setName(Settings.groupName)
   var textLayers = []
   var length = artboardLayers.length
-  var i = length
-  while (--i >= 0) {
+  var i = -1
+  while (++i < length) {
     var artboardLayer = artboardLayers[i]
     var artboardName = artboardLayer.name()
     var textLayer = MSTextLayer.alloc().initWithFrame(NSMakeRect(0,0,0,0))
