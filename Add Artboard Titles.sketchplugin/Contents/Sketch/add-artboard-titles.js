@@ -1,8 +1,6 @@
 @import 'settings.js'
 
 function createArtboardTitles (artboardLayers) {
-  var group = MSLayerGroup.new()
-  group.setName(Settings.groupName)
   var textLayers = []
   var length = artboardLayers.length
   var i = -1
@@ -23,14 +21,15 @@ function createArtboardTitles (artboardLayers) {
     textLayer.frame().setY(artboardLayer.frame().y() - textLayer.frame().height() - Settings.verticalOffset)
     textLayers.push(textLayer)
   }
-  group.addLayers(textLayers)
+  var layerArray = MSLayerArray.arrayWithLayers(textLayers)
+  var group = MSLayerGroup.groupWithLayers(layerArray)
+  group.setName(Settings.groupName)
   group.setIsLocked(true)
   return group
 }
 
 function filterOutNonArtboards (layers) {
   var result = []
-  var loop = layers.objectEnumerator();
   var length = layers.length
   var i = -1
   while (++i < length) {
@@ -48,7 +47,7 @@ function deleteGroups (page, groupName) {
   var length = layers.length
   var i = -1
   while (++i < length) {
-    var layer = layers[i];
+    var layer = layers[i]
     if (layer.name() == groupName) {
       layersToDelete.push(layer)
     }
