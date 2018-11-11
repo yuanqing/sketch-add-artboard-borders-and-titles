@@ -1,13 +1,13 @@
 @import 'settings.js'
 
 function createArtboardTitles (artboardLayers) {
-  var textLayers = []
-  var length = artboardLayers.length
-  var i = -1
+  const textLayers = []
+  const length = artboardLayers.length
+  let i = -1
   while (++i < length) {
-    var artboardLayer = artboardLayers[i]
-    var artboardName = artboardLayer.name()
-    var textLayer = MSTextLayer.alloc().initWithFrame(NSMakeRect(0,0,0,0))
+    const artboardLayer = artboardLayers[i]
+    const artboardName = artboardLayer.name()
+    const textLayer = MSTextLayer.alloc().initWithFrame(NSMakeRect(0,0,0,0))
     textLayer.setFontPostscriptName(Settings.fontName)
     textLayer.setFontSize(Settings.fontSize)
     textLayer.setLineHeight(Settings.lineHeight)
@@ -21,19 +21,19 @@ function createArtboardTitles (artboardLayers) {
     textLayer.frame().setY(artboardLayer.frame().y() - textLayer.frame().height() - Settings.verticalOffset)
     textLayers.push(textLayer)
   }
-  var layerArray = MSLayerArray.arrayWithLayers(textLayers)
-  var group = MSLayerGroup.groupWithLayers(layerArray)
+  const layerArray = MSLayerArray.arrayWithLayers(textLayers)
+  const group = MSLayerGroup.groupWithLayers(layerArray)
   group.setName(Settings.groupName)
   group.setIsLocked(true)
   return group
 }
 
 function filterOutNonArtboards (layers) {
-  var result = []
-  var length = layers.length
-  var i = -1
+  const result = []
+  const length = layers.length
+  let i = -1
   while (++i < length) {
-    var layer = layers[i]
+    const layer = layers[i]
     if (layer.className() == 'MSArtboardGroup') {
       result.push(layer)
     }
@@ -42,30 +42,30 @@ function filterOutNonArtboards (layers) {
 }
 
 function deleteGroups (page, groupName) {
-  var layersToDelete = []
-  var layers = page.layers()
-  var length = layers.length
-  var i = -1
-  while (++i < length) {
-    var layer = layers[i]
+  const layersToDelete = []
+  const layers = page.layers()
+  const layersLength = layers.length
+  let i = -1
+  while (++i < layersLength) {
+    const layer = layers[i]
     if (layer.name() == groupName) {
       layersToDelete.push(layer)
     }
   }
-  length = layersToDelete.length
-  i = -1
-  while (++i < length) {
-    layersToDelete[i].removeFromParent()
+  const layersToDeleteLength = layersToDelete.length
+  let j = -1
+  while (++j < layersToDeleteLength) {
+    layersToDelete[j].removeFromParent()
   }
 }
 
 function onRun (context) {
-  var document = context.document
-  var page = document.currentPage()
+  const document = context.document
+  const page = document.currentPage()
   deleteGroups(page, Settings.groupName)
-  var selectedLayers = context.selection
-  var artboardLayers = selectedLayers.length > 0 ? filterOutNonArtboards(selectedLayers) : page.artboards()
-  var artboardTitlesGroup = createArtboardTitles(artboardLayers)
+  const selectedLayers = context.selection
+  const artboardLayers = selectedLayers.length > 0 ? filterOutNonArtboards(selectedLayers) : page.artboards()
+  const artboardTitlesGroup = createArtboardTitles(artboardLayers)
   page.addLayers([artboardTitlesGroup])
   document.showMessage('Added Artboard titles')
 }
