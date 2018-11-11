@@ -3,7 +3,7 @@
   "description": "A Sketch plugin to automatically add titles above Artboards",
   "author": "Lim Yuan Qing",
   "homepage": "https://github.com/yuanqing/sketch-add-artboard-titles",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "identifier": "yuanqing.add-artboard-titles",
   "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-add-artboard-titles/master/appcast.xml",
   "compatibleVersion": "52.3",

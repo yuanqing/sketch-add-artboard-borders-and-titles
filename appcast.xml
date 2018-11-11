@@ -6,6 +6,11 @@
     <description>A Sketch plugin to automatically add titles above Artboards</description>
     <language>en</language>
     <item>
+      <title>v0.2.0</title>
+      <description>0.2.0</description>
+      <enclosure url="https://github.com/yuanqing/sketch-add-artboard-titles/archive/v0.2.0.zip" sparkle:version="0.2.0" />
+    </item>
+    <item>
       <title>v0.1.1</title>
       <description>0.1.1</description>
       <enclosure url="https://github.com/yuanqing/sketch-add-artboard-titles/archive/v0.1.1.zip" sparkle:version="0.1.1" />
