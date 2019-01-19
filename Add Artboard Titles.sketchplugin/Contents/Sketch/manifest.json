@@ -11,16 +11,23 @@
   "commands": [
     {
       "name": "Add Artboard Titles",
-      "identifier": "add-artboard-titles",
+      "identifier": "add-artboard-titles.add-artboard-titles",
       "description": "Add titles above your Artboards",
       "script": "add-artboard-titles.js",
       "shortcut": "ctrl option cmd t"
+    },
+    {
+      "name": "Settings",
+      "identifier": "add-artboard-titles.settings",
+      "description": "Settings for Add Artboard Titles",
+      "script": "settings.js"
     }
   ],
   "menu": {
-    "isRoot": true,
+    "title": "Add Artboard Titles",
     "items": [
-      "add-artboard-titles"
+      "add-artboard-titles.add-artboard-titles",
+      "add-artboard-titles.settings"
     ]
   }
 }
