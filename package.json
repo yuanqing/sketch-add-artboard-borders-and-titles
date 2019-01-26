@@ -1,8 +1,10 @@
 {
-  "dependencies": {
-    "prettier-standard": "^9.1.1"
+  "devDependencies": {
+    "prettier-standard": "^9.1.1",
+    "standard": "^12.0.1"
   },
   "scripts": {
-    "lint": "prettier-standard '*.sketchplugin/**/*.js'"
+    "fix": "prettier-standard '*.sketchplugin/**/*.js'",
+    "lint": "standard '*.sketchplugin/**/*.js'"
   }
 }
