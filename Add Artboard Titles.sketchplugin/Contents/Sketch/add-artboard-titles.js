@@ -1,4 +1,6 @@
-@import 'settings.js'
+/* global MSLayerArray, MSLayerGroup, NSMakeRect, MSTextLayer */
+
+const retrieveSettings = require('./settings.js').retrieveSettings
 
 const GROUP_NAME = '@ArtboardTitles'
 
@@ -43,6 +45,7 @@ function filterOutNonArtboards (layers) {
   while (++i < length) {
     const layer = layers[i]
     if (layer.className() == 'MSArtboardGroup') {
+      // eslint-disable-line eqeqeq
       result.push(layer)
     }
   }
@@ -57,6 +60,7 @@ function deleteGroups (page) {
   while (++i < layersLength) {
     const layer = layers[i]
     if (layer.name() == GROUP_NAME) {
+      // eslint-disable-line eqeqeq
       layersToDelete.push(layer)
     }
   }
@@ -84,3 +88,5 @@ function onRun (context) {
   page.addLayers([artboardTitlesGroup])
   document.showMessage('Added Artboard titles')
 }
+
+module.exports = onRun

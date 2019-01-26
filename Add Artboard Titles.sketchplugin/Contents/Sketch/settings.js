@@ -1,3 +1,5 @@
+/* global COSAlertWindow, NSMakeRect, NSTextField, NSUserDefaults, NSView */
+
 function createTextInput (value, x, y, width, height) {
   const textInput = NSTextField.alloc().initWithFrame(
     NSMakeRect(x, y, width, height)
@@ -136,7 +138,7 @@ function saveSettings (userDefaults, fields) {
   while (++i < length) {
     const key = keys[i]
     const value = fields[key].stringValue()
-    [userDefaults setObject:value forKey:key]
+    userDefaults.setObject_forKey(value, key)
   }
   userDefaults.synchronize()
 }
@@ -145,7 +147,11 @@ function onRun () {
   const settings = retrieveSettings()
   const dialog = createDialog(settings.fields)
   if (dialog.alert.runModal() == '1000') {
+    // eslint-disable-line eqeqeq
     // the first button ('OK') was clicked
     saveSettings(settings.userDefaults, dialog.fields)
   }
 }
+
+module.exports = onRun
+module.exports.retrieveSettings = retrieveSettings
