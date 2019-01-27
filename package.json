@@ -11,6 +11,6 @@
     "watch": "chokidar './Add Artboard Titles.sketchplugin/**/*' -c 'npm run copy'"
   },
   "standard": {
-    "globals": [ "COSAlertWindow", "MSLayerArray", "MSLayerGroup", "NSMakeRect", "MSTextLayer", "NSUserDefaults", "NSView" ]
+    "globals": [ "COSAlertWindow", "MSLayerArray", "MSLayerGroup", "NSMakeRect", "NSTextField", "MSTextLayer", "NSUserDefaults", "NSView" ]
   }
 }

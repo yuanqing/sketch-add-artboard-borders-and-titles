@@ -1,5 +1,3 @@
-/* global NSMakeRect, NSTextField */
-
 function createLabel (value, x, y, width, height) {
   const label = NSTextField.alloc().initWithFrame(
     NSMakeRect(x, y, width, height)
