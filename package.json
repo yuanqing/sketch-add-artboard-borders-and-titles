@@ -5,12 +5,12 @@
     "standard": "^12.0.1"
   },
   "scripts": {
-    "copy": "rm -rf ~/Library/Application\\ Support/com.bohemiancoding.sketch3/Plugins/Add\\ Artboard\\ Titles.sketchplugin && cp -R ./Add\\ Artboard\\ Titles.sketchplugin ~/Library/Application\\ Support/com.bohemiancoding.sketch3/Plugins",
+    "copy": "rm -rf ~/Library/Application\\ Support/com.bohemiancoding.sketch3/Plugins/Add\\ Artboard\\ Borders\\ and\\ Titles.sketchplugin && cp -R ./Add\\ Artboard\\ Borders\\ and\\ Titles.sketchplugin ~/Library/Application\\ Support/com.bohemiancoding.sketch3/Plugins",
     "fix": "prettier-standard '*.sketchplugin/**/*.js'",
     "lint": "standard '*.sketchplugin/**/*.js'",
-    "watch": "chokidar './Add Artboard Titles.sketchplugin/**/*' -c 'npm run copy'"
+    "watch": "chokidar './Add Artboard Borders and Titles.sketchplugin/**/*' --command 'yarn copy' --initial"
   },
   "standard": {
-    "globals": [ "COSAlertWindow", "MSLayerArray", "MSLayerGroup", "NSMakeRect", "NSTextField", "MSTextLayer", "NSUserDefaults", "NSView" ]
+    "globals": [ "COSAlertWindow", "MSImmutableColor", "MSLayerArray", "MSLayerGroup", "NSMakeRect", "MSRectangleShape", "MSStyle", "NSTextField", "MSTextLayer", "NSUserDefaults", "NSView" ]
   }
 }

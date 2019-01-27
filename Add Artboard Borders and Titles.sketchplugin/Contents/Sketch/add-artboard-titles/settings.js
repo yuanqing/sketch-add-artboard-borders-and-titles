@@ -1,7 +1,9 @@
 /* eslint-disable eqeqeq */
 
-const createTextInput = require('./form/create-text-input.js')
-const createLabel = require('./form/create-label.js')
+const createTextInput = require('../form/create-text-input.js')
+const createLabel = require('../form/create-label.js')
+const factory = require('../settings/factory.js')
+const options = require('./options.js')
 
 function createDialog (values) {
   const alert = COSAlertWindow.new()
@@ -98,41 +100,8 @@ function createDialog (values) {
   }
 }
 
-function retrieveSettings () {
-  const userDefaults = NSUserDefaults.alloc().initWithSuiteName(
-    'yuanqing.add-artboard-titles'
-  )
-  return {
-    userDefaults: userDefaults,
-    values: {
-      font: userDefaults.objectForKey('font') || 'Helvetica',
-      fontSize: userDefaults.objectForKey('fontSize') || '24',
-      lineHeight: userDefaults.objectForKey('lineHeight') || '32',
-      verticalOffset: userDefaults.objectForKey('verticalOffset') || '16'
-    }
-  }
-}
-
-function saveSettings (userDefaults, fields) {
-  const keys = Object.keys(fields)
-  const length = keys.length
-  let i = -1
-  while (++i < length) {
-    const key = keys[i]
-    const value = fields[key].stringValue()
-    userDefaults.setObject_forKey(value, key)
-  }
-  userDefaults.synchronize()
-}
-
 function onRun (context) {
-  const settings = retrieveSettings()
-  const dialog = createDialog(settings.values)
-  if (dialog.run() == '1000') {
-    // the first button ('OK') was clicked
-    saveSettings(settings.userDefaults, dialog.fields)
-  }
+  return factory(context, createDialog, options)
 }
 
 module.exports = onRun
-module.exports.retrieveSettings = retrieveSettings

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>Add Artboard Titles</title>
-    <link>https://raw.githubusercontent.com/yuanqing/sketch-add-artboard-titles/master/appcast.xml</link>
-    <description>A Sketch plugin to automatically add titles above Artboards</description>
+    <title>Add Artboard Borders and Titles</title>
+    <link>https://raw.githubusercontent.com/yuanqing/sketch-add-artboard-borders-and-titles/master/appcast.xml</link>
+    <description>A Sketch plugin to automatically add borders and titles to Artboards</description>
     <language>en</language>
     <item>
       <title>v0.3.0</title>
       <description>0.3.0</description>
-      <enclosure url="https://github.com/yuanqing/sketch-add-artboard-titles/archive/v0.3.0.zip" sparkle:version="0.3.0" />
+      <enclosure url="https://github.com/yuanqing/sketch-add-artboard-borders-and-titles/archive/v0.3.0.zip" sparkle:version="0.3.0" />
     </item>
     <item>
       <title>v0.2.0</title>
       <description>0.2.0</description>
-      <enclosure url="https://github.com/yuanqing/sketch-add-artboard-titles/archive/v0.2.0.zip" sparkle:version="0.2.0" />
+      <enclosure url="https://github.com/yuanqing/sketch-add-artboard-borders-and-titles/archive/v0.2.0.zip" sparkle:version="0.2.0" />
     </item>
     <item>
       <title>v0.1.1</title>
       <description>0.1.1</description>
-      <enclosure url="https://github.com/yuanqing/sketch-add-artboard-titles/archive/v0.1.1.zip" sparkle:version="0.1.1" />
+      <enclosure url="https://github.com/yuanqing/sketch-add-artboard-borders-and-titles/archive/v0.1.1.zip" sparkle:version="0.1.1" />
     </item>
     <item>
       <title>v0.1.0</title>
       <description>0.1.0</description>
-      <enclosure url="https://github.com/yuanqing/sketch-add-artboard-titles/archive/v0.1.0.zip" sparkle:version="0.1.0" />
+      <enclosure url="https://github.com/yuanqing/sketch-add-artboard-borders-and-titles/archive/v0.1.0.zip" sparkle:version="0.1.0" />
     </item>
   </channel>
 </rss>

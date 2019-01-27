@@ -1,0 +1,49 @@
+{
+  "name": "Add Artboard Borders and Titles",
+  "description": "A Sketch plugin to automatically add borders and titles to Artboards",
+  "author": "Lim Yuan Qing",
+  "homepage": "https://github.com/yuanqing/sketch-add-artboard-borders-and-titles",
+  "version": "0.3.0",
+  "identifier": "yuanqing.add-artboard-borders-and-titles",
+  "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-add-artboard-borders-and-titles/master/appcast.xml",
+  "compatibleVersion": "52.3",
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "Add Artboard Borders",
+      "identifier": "yuanqing.add-artboard-borders-and-titles.borders",
+      "description": "Add borders on your Artboards",
+      "script": "add-artboard-borders/add-artboard-borders.js",
+      "shortcut": "ctrl option cmd b"
+    },
+    {
+      "name": "Settings",
+      "identifier": "yuanqing.add-artboard-borders-and-titles.borders.settings",
+      "description": "Settings for Add Artboard Borders",
+      "script": "add-artboard-borders/settings.js"
+    },
+    {
+      "name": "Add Artboard Titles",
+      "identifier": "yuanqing.add-artboard-borders-and-titles.titles",
+      "description": "Add titles above your Artboards",
+      "script": "add-artboard-titles/add-artboard-titles.js",
+      "shortcut": "ctrl option cmd t"
+    },
+    {
+      "name": "Settings",
+      "identifier": "yuanqing.add-artboard-borders-and-titles.titles.settings",
+      "description": "Settings for Add Artboard Titles",
+      "script": "add-artboard-titles/settings.js"
+    }
+  ],
+  "menu": {
+    "title": "Add Artboard Borders and Titles",
+    "items": [
+      "yuanqing.add-artboard-borders-and-titles.borders",
+      "yuanqing.add-artboard-borders-and-titles.borders.settings",
+      "-",
+      "yuanqing.add-artboard-borders-and-titles.titles",
+      "yuanqing.add-artboard-borders-and-titles.titles.settings"
+    ]
+  }
+}
