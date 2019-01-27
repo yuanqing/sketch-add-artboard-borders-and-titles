@@ -9,9 +9,7 @@ function factory (context, callback, options) {
   const selectedLayers = context.selection
   const selectedArtboards = filterOutNonArtboards(selectedLayers)
   const artboardLayers =
-    selectedArtboards.length > 0
-      ? selectedArtboards
-      : page.artboards()
+    selectedArtboards.length > 0 ? selectedArtboards : page.artboards()
   const settings = readSettings(options.identifier, options.defaultSettings)
   const group = callback(artboardLayers, settings.values, options.groupName)
   page.addLayers([group])
