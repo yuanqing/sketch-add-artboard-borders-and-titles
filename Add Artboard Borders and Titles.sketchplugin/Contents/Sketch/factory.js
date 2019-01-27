@@ -7,9 +7,10 @@ function factory (context, callback, options) {
   const page = document.currentPage()
   deleteLayers(options.groupName, page.layers())
   const selectedLayers = context.selection
+  const selectedArtboards = filterOutNonArtboards(selectedLayers)
   const artboardLayers =
-    selectedLayers.length > 0
-      ? filterOutNonArtboards(selectedLayers)
+    selectedArtboards.length > 0
+      ? selectedArtboards
       : page.artboards()
   const settings = readSettings(options.identifier, options.defaultSettings)
   const group = callback(artboardLayers, settings.values, options.groupName)
