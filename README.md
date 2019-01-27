@@ -13,9 +13,7 @@
 - Draws borders around the selected Artboards, or all Artboards on the current Page if no Artboard was selected
 - Border layers are placed in a locked Group named `@ArtboardBorders`
 
-#### Settings
-
-Setting | Default
+Settings | Default
 :--|:--
 Border color (hex code) | `#000000`
 Border width (pixels) | `2`
@@ -27,9 +25,7 @@ Border width (pixels) | `2`
 - Adds titles above the selected Artboards, or all Artboards on the current Page if no Artboard was selected
 - Title layers are placed in a locked Group named `@ArtboardTitles`
 
-#### Settings
-
-Setting | Default
+Settings | Default
 :--|:--
 Font | `Helvetica`
 Font size (pixels) | `24`
