@@ -1,7 +1,7 @@
 /* eslint-disable eqeqeq */
 
-const deleteLayers = require('./utilities/delete-layers')
-const filterOutNonArtboards = require('./utilities/filter-out-non-artboards')
+const deleteLayers = require('./layer/delete-layers')
+const filterOutNonArtboards = require('./layer/filter-out-non-artboards')
 const retrieveSettings = require('./settings.js').retrieveSettings
 
 const GROUP_NAME = '@ArtboardTitles'
