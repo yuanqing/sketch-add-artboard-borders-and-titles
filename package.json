@@ -11,6 +11,18 @@
     "watch": "chokidar './Add Artboard Borders and Titles.sketchplugin/**/*' --command 'yarn copy' --initial"
   },
   "standard": {
-    "globals": [ "COSAlertWindow", "MSImmutableColor", "MSLayerArray", "MSLayerGroup", "NSMakeRect", "MSRectangleShape", "MSStyle", "NSTextField", "MSTextLayer", "NSUserDefaults", "NSView" ]
+    "globals": [
+      "COSAlertWindow",
+      "MSImmutableColor",
+      "MSLayerArray",
+      "MSLayerGroup",
+      "NSMakeRect",
+      "MSRectangleShape",
+      "MSStyle",
+      "NSTextField",
+      "MSTextLayer",
+      "NSUserDefaults",
+      "NSView"
+    ]
   }
 }
