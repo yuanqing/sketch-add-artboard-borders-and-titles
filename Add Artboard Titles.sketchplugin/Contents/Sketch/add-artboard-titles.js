@@ -1,5 +1,7 @@
 /* eslint-disable eqeqeq */
 
+const deleteLayers = require('./utilities/delete-layers')
+const filterOutNonArtboards = require('./utilities/filter-out-non-artboards')
 const retrieveSettings = require('./settings.js').retrieveSettings
 
 const GROUP_NAME = '@ArtboardTitles'
@@ -38,41 +40,10 @@ function createArtboardTitles (artboardLayers, values) {
   return group
 }
 
-function filterOutNonArtboards (layers) {
-  const result = []
-  const length = layers.length
-  let i = -1
-  while (++i < length) {
-    const layer = layers[i]
-    if (layer.className() == 'MSArtboardGroup') {
-      result.push(layer)
-    }
-  }
-  return result
-}
-
-function deleteGroups (page) {
-  const layersToDelete = []
-  const layers = page.layers()
-  const layersLength = layers.length
-  let i = -1
-  while (++i < layersLength) {
-    const layer = layers[i]
-    if (layer.name() == GROUP_NAME) {
-      layersToDelete.push(layer)
-    }
-  }
-  const layersToDeleteLength = layersToDelete.length
-  let j = -1
-  while (++j < layersToDeleteLength) {
-    layersToDelete[j].removeFromParent()
-  }
-}
-
 function onRun (context) {
   const document = context.document
   const page = document.currentPage()
-  deleteGroups(page)
+  deleteLayers(GROUP_NAME, page.layers())
   const selectedLayers = context.selection
   const artboardLayers =
     selectedLayers.length > 0
