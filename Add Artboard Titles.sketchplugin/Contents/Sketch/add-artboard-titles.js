@@ -1,10 +1,10 @@
-/* global MSLayerArray, MSLayerGroup, NSMakeRect, MSTextLayer */
+/* eslint-disable eqeqeq */
 
 const retrieveSettings = require('./settings.js').retrieveSettings
 
 const GROUP_NAME = '@ArtboardTitles'
 
-function createArtboardTitles (artboardLayers, fields) {
+function createArtboardTitles (artboardLayers, values) {
   const textLayers = []
   const length = artboardLayers.length
   let i = -1
@@ -12,9 +12,9 @@ function createArtboardTitles (artboardLayers, fields) {
     const artboardLayer = artboardLayers[i]
     const artboardName = artboardLayer.name()
     const textLayer = MSTextLayer.alloc().initWithFrame(NSMakeRect(0, 0, 0, 0))
-    textLayer.setFontPostscriptName(fields.font)
-    textLayer.setFontSize(fields.fontSize)
-    textLayer.setLineHeight(fields.lineHeight)
+    textLayer.setFontPostscriptName(values.font)
+    textLayer.setFontSize(values.fontSize)
+    textLayer.setLineHeight(values.lineHeight)
     textLayer.setStringValue(artboardName)
     textLayer.setName(artboardName)
     textLayer.setVerticalAlignment('bottom')
@@ -27,7 +27,7 @@ function createArtboardTitles (artboardLayers, fields) {
       .setY(
         artboardLayer.frame().y() -
           textLayer.frame().height() -
-          fields.verticalOffset
+          values.verticalOffset
       )
     textLayers.push(textLayer)
   }
@@ -45,7 +45,6 @@ function filterOutNonArtboards (layers) {
   while (++i < length) {
     const layer = layers[i]
     if (layer.className() == 'MSArtboardGroup') {
-      // eslint-disable-line eqeqeq
       result.push(layer)
     }
   }
@@ -60,7 +59,6 @@ function deleteGroups (page) {
   while (++i < layersLength) {
     const layer = layers[i]
     if (layer.name() == GROUP_NAME) {
-      // eslint-disable-line eqeqeq
       layersToDelete.push(layer)
     }
   }
@@ -83,7 +81,7 @@ function onRun (context) {
   const settings = retrieveSettings()
   const artboardTitlesGroup = createArtboardTitles(
     artboardLayers,
-    settings.fields
+    settings.values
   )
   page.addLayers([artboardTitlesGroup])
   document.showMessage('Added Artboard titles')

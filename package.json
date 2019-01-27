@@ -1,10 +1,16 @@
 {
   "devDependencies": {
+    "chokidar-cli": "^1.2.1",
     "prettier-standard": "^9.1.1",
     "standard": "^12.0.1"
   },
   "scripts": {
+    "copy": "rm -rf ~/Library/Application\\ Support/com.bohemiancoding.sketch3/Plugins/Add\\ Artboard\\ Titles.sketchplugin && cp -R ./Add\\ Artboard\\ Titles.sketchplugin ~/Library/Application\\ Support/com.bohemiancoding.sketch3/Plugins",
     "fix": "prettier-standard '*.sketchplugin/**/*.js'",
-    "lint": "standard '*.sketchplugin/**/*.js'"
+    "lint": "standard '*.sketchplugin/**/*.js'",
+    "watch": "chokidar './Add Artboard Titles.sketchplugin/**/*' -c 'npm run copy'"
+  },
+  "standard": {
+    "globals": [ "COSAlertWindow", "MSLayerArray", "MSLayerGroup", "NSMakeRect", "MSTextLayer", "NSUserDefaults", "NSView" ]
   }
 }

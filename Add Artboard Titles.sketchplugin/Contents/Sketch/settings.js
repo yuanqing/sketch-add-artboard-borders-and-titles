@@ -1,26 +1,9 @@
-/* global COSAlertWindow, NSMakeRect, NSTextField, NSUserDefaults, NSView */
+/* eslint-disable eqeqeq */
 
-function createTextInput (value, x, y, width, height) {
-  const textInput = NSTextField.alloc().initWithFrame(
-    NSMakeRect(x, y, width, height)
-  )
-  textInput.setStringValue(value)
-  return textInput
-}
+const createTextInput = require('./form/create-text-input.js')
+const createLabel = require('./form/create-label.js')
 
-function createLabel (value, x, y, width, height) {
-  const label = NSTextField.alloc().initWithFrame(
-    NSMakeRect(x, y, width, height)
-  )
-  label.setStringValue(value)
-  label.setSelectable(false)
-  label.setEditable(false)
-  label.setBezeled(false)
-  label.setDrawsBackground(false)
-  return label
-}
-
-function createDialog (settings) {
+function createDialog (values) {
   const alert = COSAlertWindow.new()
   alert.setMessageText('Add Artboard Titles')
   alert.addButtonWithTitle('OK')
@@ -44,7 +27,7 @@ function createDialog (settings) {
     rowHeight
   )
   const fontTextField = createTextInput(
-    settings.font,
+    values.font,
     0,
     viewHeight - 2 * rowHeight,
     viewWidth,
@@ -58,7 +41,7 @@ function createDialog (settings) {
     rowHeight
   )
   const fontSizeTextField = createTextInput(
-    settings.fontSize,
+    values.fontSize,
     0,
     viewHeight - 4 * rowHeight - 1 * padding,
     columnWidth,
@@ -72,7 +55,7 @@ function createDialog (settings) {
     rowHeight
   )
   const lineHeightTextField = createTextInput(
-    settings.lineHeight,
+    values.lineHeight,
     columnWidth + padding,
     viewHeight - 4 * rowHeight - 1 * padding,
     columnWidth,
@@ -86,7 +69,7 @@ function createDialog (settings) {
     rowHeight
   )
   const verticalOffsetField = createTextInput(
-    settings.verticalOffset,
+    values.verticalOffset,
     0,
     viewHeight - 6 * rowHeight - 2 * padding,
     viewWidth,
@@ -105,7 +88,7 @@ function createDialog (settings) {
   lineHeightTextField.setNextKeyView(verticalOffsetField)
 
   return {
-    alert: alert,
+    run: alert.runModal,
     fields: {
       font: fontTextField,
       fontSize: fontSizeTextField,
@@ -119,16 +102,15 @@ function retrieveSettings () {
   const userDefaults = NSUserDefaults.alloc().initWithSuiteName(
     'yuanqing.add-artboard-titles'
   )
-  const settings = {
+  return {
     userDefaults: userDefaults,
-    fields: {
+    values: {
       font: userDefaults.objectForKey('font') || 'Helvetica',
       fontSize: userDefaults.objectForKey('fontSize') || '24',
       lineHeight: userDefaults.objectForKey('lineHeight') || '32',
       verticalOffset: userDefaults.objectForKey('verticalOffset') || '16'
     }
   }
-  return settings
 }
 
 function saveSettings (userDefaults, fields) {
@@ -143,11 +125,10 @@ function saveSettings (userDefaults, fields) {
   userDefaults.synchronize()
 }
 
-function onRun () {
+function onRun (context) {
   const settings = retrieveSettings()
-  const dialog = createDialog(settings.fields)
-  if (dialog.alert.runModal() == '1000') {
-    // eslint-disable-line eqeqeq
+  const dialog = createDialog(settings.values)
+  if (dialog.run() == '1000') {
     // the first button ('OK') was clicked
     saveSettings(settings.userDefaults, dialog.fields)
   }
