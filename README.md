@@ -1,6 +1,6 @@
 # sketch-add-artboard-borders-and-titles
 
-> A Sketch plugin to automatically add borders and titles to Artboards
+> A Sketch plugin to automatically add borders and titles to artboards
 
 - Useful for preparing UX specifications for documentation or for print
 
@@ -10,8 +10,8 @@
 
 <kbd>⌘</kbd> <kbd>Ctrl</kbd> <kbd>Option</kbd> <kbd>B</kbd>
 
-- Draws borders around the selected Artboards, or all Artboards on the current Page if no Artboard was selected
-- Border layers are placed in a locked Group named `@ArtboardBorders`
+- Draws borders around the selected artboards, or all artboards on the current page if no artboard was selected
+- Border layers are placed in a locked group named `@ArtboardBorders`
 
 Settings | Default
 :--|:--
@@ -22,8 +22,8 @@ Border width (pixels) | `2`
 
 <kbd>⌘</kbd> <kbd>Ctrl</kbd> <kbd>Option</kbd> <kbd>T</kbd>
 
-- Adds titles above the selected Artboards, or all Artboards on the current Page if no Artboard was selected
-- Title layers are placed in a locked Group named `@ArtboardTitles`
+- Adds titles above the selected artboards, or all artboards on the current page if no artboard was selected
+- Title layers are placed in a locked group named `@ArtboardTitles`
 
 Settings | Default
 :--|:--
@@ -36,10 +36,6 @@ Vertical offset (pixels) | `16`
 
 1. [Download and unzip the latest release.](https://github.com/yuanqing/sketch-add-artboard-borders-and-titles/releases)
 2. Double-click `Add Artboard Borders and Titles.sketchplugin` to install.
-
-## Related plugins
-
-- [Draw Slice Over Selection](https://github.com/yuanqing/sketch-draw-slice-over-selection)
 
 ## License
 

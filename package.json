@@ -1,28 +1,52 @@
 {
+  "private": true,
+  "version": "0.4.1",
   "devDependencies": {
-    "chokidar-cli": "^1.2.1",
-    "prettier-standard": "^9.1.1",
-    "standard": "^12.0.1"
+    "sketch-plugin-helper": "*"
   },
   "scripts": {
-    "copy": "rm -rf ~/Library/Application\\ Support/com.bohemiancoding.sketch3/Plugins/Add\\ Artboard\\ Borders\\ and\\ Titles.sketchplugin && cp -R ./Add\\ Artboard\\ Borders\\ and\\ Titles.sketchplugin ~/Library/Application\\ Support/com.bohemiancoding.sketch3/Plugins",
-    "fix": "prettier-standard '*.sketchplugin/**/*.js'",
-    "lint": "standard '*.sketchplugin/**/*.js'",
-    "watch": "chokidar './Add Artboard Borders and Titles.sketchplugin/**/*' --command 'yarn copy' --initial"
+    "build": "sph build",
+    "fix": "sph lint --fix",
+    "lint": "sph lint",
+    "symlink": "sph symlink",
+    "unlink": "sph symlink --delete",
+    "version": "sph version",
+    "watch": "sph build --watch"
   },
-  "standard": {
-    "globals": [
-      "COSAlertWindow",
-      "MSImmutableColor",
-      "MSLayerArray",
-      "MSLayerGroup",
-      "NSMakeRect",
-      "MSRectangleShape",
-      "MSStyle",
-      "NSTextField",
-      "MSTextLayer",
-      "NSUserDefaults",
-      "NSView"
-    ]
+  "sketch-plugin-helper": {
+    "pluginName": "Add Artboard Borders and Titles",
+    "pluginDescription": "A Sketch plugin to automatically add borders and titles to artboards",
+    "authorName": "Lim Yuan Qing",
+    "githubUserName": "yuanqing",
+    "githubRepositoryName": "sketch-add-artboard-borders-and-titles",
+    "menu": [
+      {
+        "handler": "add-artboard-borders/add-artboard-borders",
+        "label": "Add Artboard Borders",
+        "shortcut": "ctrl option cmd b"
+      },
+      {
+        "handler": "add-artboard-borders/settings",
+        "label": "Settings"
+      },
+      "-",
+      {
+        "handler": "add-artboard-titles/add-artboard-titles",
+        "label": "Add Artboard Titles",
+        "shortcut": "ctrl option cmd t"
+      },
+      {
+        "handler": "add-artboard-titles/settings",
+        "label": "Settings"
+      }
+    ],
+    "defaults": {
+      "addArtboardBorders.borderColor": "#000000",
+      "addArtboardBorders.borderWidth": "2",
+      "addArtboardTitles.font": "Helvetica",
+      "addArtboardTitles.fontSize": "24",
+      "addArtboardTitles.lineHeight": "32",
+      "addArtboardTitles.verticalOffset": "16"
+    }
   }
 }
