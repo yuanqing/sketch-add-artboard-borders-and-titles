@@ -1,21 +1,17 @@
-const {
+import {
   getSavedUserInput,
   addLayersToPage,
   getAllArtboards,
   getAllLayers,
   showErrorMessage,
   showSuccessMessage
-} = require('sketch-plugin-helper')
+} from 'sketch-plugin-helper'
 
-function deleteLayers (layerName) {
-  getAllLayers().forEach(function (layer) {
-    if (layer.type == 'Group' && layer.name == layerName) {
-      layer.removeFromParent()
-    }
-  })
-}
-
-function implementationFactory ({ mapArtboards, groupName, successMessage }) {
+export function implementationFactory ({
+  mapArtboards,
+  groupName,
+  successMessage
+}) {
   return function () {
     deleteLayers(groupName)
     const artboards = getAllArtboards()
@@ -33,4 +29,10 @@ function implementationFactory ({ mapArtboards, groupName, successMessage }) {
   }
 }
 
-module.exports = implementationFactory
+function deleteLayers (layerName) {
+  getAllLayers().forEach(function (layer) {
+    if (layer.type == 'Group' && layer.name == layerName) {
+      layer.removeFromParent()
+    }
+  })
+}

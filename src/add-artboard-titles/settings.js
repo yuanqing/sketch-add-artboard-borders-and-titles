@@ -1,6 +1,6 @@
-const { TEXT_BOX } = require('sketch-plugin-helper')
+import { TEXT_BOX } from 'sketch-plugin-helper'
 
-const settingsFactory = require('../factory/settings-factory')
+import { settingsFactory } from '../factory/settings-factory'
 
 const userInputConfig = {
   title: 'Setings for Add Artboard Titles',
@@ -28,4 +28,4 @@ const userInputConfig = {
   ]
 }
 
-module.exports = settingsFactory(userInputConfig)
+export default settingsFactory(userInputConfig)

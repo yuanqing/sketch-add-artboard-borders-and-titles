@@ -1,4 +1,4 @@
-const implementationFactory = require('../factory/implementation-factory')
+import { implementationFactory } from '../factory/implementation-factory'
 
 function createArtboardTitles ({ artboards, userInput, groupName }) {
   const newLayers = []
@@ -32,7 +32,7 @@ function createArtboardTitles ({ artboards, userInput, groupName }) {
   return layerGroup
 }
 
-module.exports = implementationFactory({
+export default implementationFactory({
   mapArtboards: createArtboardTitles,
   groupName: '@ArtboardTitles',
   successMessage: 'Added artboard titles'

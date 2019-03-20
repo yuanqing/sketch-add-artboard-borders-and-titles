@@ -1,6 +1,6 @@
-const { TEXT_BOX } = require('sketch-plugin-helper')
+import { TEXT_BOX } from 'sketch-plugin-helper'
 
-const settingsFactory = require('../factory/settings-factory')
+import { settingsFactory } from '../factory/settings-factory'
 
 const userInputConfig = {
   title: 'Settings for Add Artboard Borders',
@@ -18,4 +18,4 @@ const userInputConfig = {
   ]
 }
 
-module.exports = settingsFactory(userInputConfig)
+export default settingsFactory(userInputConfig)

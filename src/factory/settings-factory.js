@@ -1,6 +1,6 @@
-const { openUserInputDialog, saveUserInput } = require('sketch-plugin-helper')
+import { openUserInputDialog, saveUserInput } from 'sketch-plugin-helper'
 
-function settings (userInputConfig) {
+export function settingsFactory (userInputConfig) {
   return function () {
     const userInput = openUserInputDialog(userInputConfig)
     if (userInput) {
@@ -8,5 +8,3 @@ function settings (userInputConfig) {
     }
   }
 }
-
-module.exports = settings
