@@ -26,18 +26,21 @@
         "shortcut": "ctrl option cmd b"
       },
       {
-        "handler": "add-artboard-borders/settings",
-        "label": "Settings"
-      },
-      "-",
-      {
         "handler": "add-artboard-titles/add-artboard-titles",
         "label": "Add Artboard Titles",
         "shortcut": "ctrl option cmd t"
       },
       {
-        "handler": "add-artboard-titles/settings",
-        "label": "Settings"
+        "Settings": [
+          {
+            "handler": "add-artboard-borders/settings",
+            "label": "Add Artboard Borders"
+          },
+          {
+            "handler": "add-artboard-titles/settings",
+            "label": "Add Artboard Titles"
+          }
+        ]
       }
     ],
     "defaults": {
