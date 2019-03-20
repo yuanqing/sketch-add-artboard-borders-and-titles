@@ -7,7 +7,7 @@ import {
   showSuccessMessage
 } from 'sketch-plugin-helper'
 
-export function implementationFactory ({
+export default function implementationFactory ({
   mapArtboards,
   groupName,
   successMessage

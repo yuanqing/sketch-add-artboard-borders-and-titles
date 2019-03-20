@@ -1,4 +1,4 @@
-import { implementationFactory } from '../factory/implementation-factory'
+import implementationFactory from '../factory/implementation-factory'
 
 function createArtboardTitles ({ artboards, userInput, groupName }) {
   const newLayers = []

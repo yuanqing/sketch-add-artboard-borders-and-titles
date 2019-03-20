@@ -1,6 +1,6 @@
 import { TEXT_BOX } from 'sketch-plugin-helper'
 
-import { settingsFactory } from '../factory/settings-factory'
+import settingsFactory from '../factory/settings-factory'
 
 const userInputConfig = {
   title: 'Settings for Add Artboard Borders',

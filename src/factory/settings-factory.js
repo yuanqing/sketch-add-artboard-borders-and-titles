@@ -1,6 +1,6 @@
 import { openUserInputDialog, saveUserInput } from 'sketch-plugin-helper'
 
-export function settingsFactory (userInputConfig) {
+export default function settingsFactory (userInputConfig) {
   return function () {
     const userInput = openUserInputDialog(userInputConfig)
     if (userInput) {
