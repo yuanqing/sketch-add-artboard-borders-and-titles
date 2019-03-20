@@ -34,11 +34,11 @@
         "Settings": [
           {
             "handler": "add-artboard-borders/settings",
-            "label": "Add Artboard Borders"
+            "label": "Settings for Add Artboard Borders"
           },
           {
             "handler": "add-artboard-titles/settings",
-            "label": "Add Artboard Titles"
+            "label": "Settings for Add Artboard Titles"
           }
         ]
       }
