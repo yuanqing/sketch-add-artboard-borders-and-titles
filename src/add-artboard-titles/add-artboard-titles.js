@@ -11,6 +11,7 @@ function createArtboardTitles ({ artboards, userInput, groupName }) {
     textLayer.setLineHeight(userInput['addArtboardTitles.lineHeight'])
     textLayer.setStringValue(artboardName)
     textLayer.setName(artboardName)
+    textLayer.setIsLocked(true)
     textLayer.setVerticalAlignment('bottom')
     textLayer.frame().setWidth(artboardFrame.width)
     textLayer.setTextBehaviour(1)

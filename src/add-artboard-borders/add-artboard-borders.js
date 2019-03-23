@@ -7,6 +7,7 @@ function createArtboardBorders ({ artboards, userInput, groupName }) {
       artboard.sketchObject.rect()
     )
     rectangleShape.setName(artboard.name)
+    rectangleShape.setIsLocked(true)
     const style = MSStyle.alloc().init()
     const border = style.addStylePartOfType(1)
     border.color = MSImmutableColor.colorWithSVGString(
