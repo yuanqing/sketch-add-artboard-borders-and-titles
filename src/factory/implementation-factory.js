@@ -15,7 +15,7 @@ export default function implementationFactory ({
   return function () {
     deleteLayers(groupName)
     const artboards = getAllArtboards()
-    if (artboards.length == 0) {
+    if (artboards.length === 0) {
       showErrorMessage('No artboards')
       return
     }
@@ -31,8 +31,8 @@ export default function implementationFactory ({
 
 function deleteLayers (layerName) {
   getAllLayers().forEach(function (layer) {
-    if (layer.type == 'Group' && layer.name == layerName) {
-      layer.removeFromParent()
+    if (layer.type === 'Group' && layer.name === layerName) {
+      layer.remove()
     }
   })
 }
