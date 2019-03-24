@@ -11,7 +11,6 @@
 <kbd>⌘</kbd> <kbd>Ctrl</kbd> <kbd>Option</kbd> <kbd>B</kbd>
 
 - Draws borders around the selected artboards, or all artboards on the current page if no artboard was selected
-- Border layers are placed in a locked group named `@ArtboardBorders`
 
 Settings | Default
 :--|:--
@@ -23,7 +22,6 @@ Border width (pixels) | `2`
 <kbd>⌘</kbd> <kbd>Ctrl</kbd> <kbd>Option</kbd> <kbd>T</kbd>
 
 - Adds titles above the selected artboards, or all artboards on the current page if no artboard was selected
-- Title layers are placed in a locked group named `@ArtboardTitles`
 
 Settings | Default
 :--|:--
