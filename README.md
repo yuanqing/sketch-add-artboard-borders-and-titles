@@ -8,8 +8,6 @@
 
 ### Add Artboard Borders
 
-<kbd>⌘</kbd> <kbd>Ctrl</kbd> <kbd>Option</kbd> <kbd>B</kbd>
-
 - Draws borders around the selected artboards, or all artboards on the current page if no artboard was selected
 
 Settings | Default
@@ -18,8 +16,6 @@ Border color (hex code) | `#000000`
 Border width (pixels) | `2`
 
 ### Add Artboard Titles
-
-<kbd>⌘</kbd> <kbd>Ctrl</kbd> <kbd>Option</kbd> <kbd>T</kbd>
 
 - Adds titles above the selected artboards, or all artboards on the current page if no artboard was selected
 

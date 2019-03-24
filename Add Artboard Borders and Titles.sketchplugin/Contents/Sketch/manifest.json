@@ -13,14 +13,12 @@
       "name": "Add Artboard Borders",
       "identifier": "yuanqing.sketch-add-artboard-borders-and-titles.add-artboard-borders.add-artboard-borders",
       "script": "plugin.js",
-      "shortcut": "ctrl option cmd b",
       "handler": "add-artboard-borders/add-artboard-borders"
     },
     {
       "name": "Add Artboard Titles",
       "identifier": "yuanqing.sketch-add-artboard-borders-and-titles.add-artboard-titles.add-artboard-titles",
       "script": "plugin.js",
-      "shortcut": "ctrl option cmd t",
       "handler": "add-artboard-titles/add-artboard-titles"
     },
     {

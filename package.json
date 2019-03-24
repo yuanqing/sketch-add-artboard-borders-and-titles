@@ -22,13 +22,11 @@
     "menu": [
       {
         "handler": "add-artboard-borders/add-artboard-borders",
-        "label": "Add Artboard Borders",
-        "shortcut": "ctrl option cmd b"
+        "label": "Add Artboard Borders"
       },
       {
         "handler": "add-artboard-titles/add-artboard-titles",
-        "label": "Add Artboard Titles",
-        "shortcut": "ctrl option cmd t"
+        "label": "Add Artboard Titles"
       },
       "-",
       {
