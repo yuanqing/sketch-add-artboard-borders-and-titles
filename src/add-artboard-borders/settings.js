@@ -6,14 +6,14 @@ const settingsConfig = {
   title: 'Settings for Add Artboard Borders',
   inputs: [
     {
+      type: NUMERIC_TEXT_BOX,
       key: 'addArtboardBorders.borderWidth',
-      label: 'Border width',
-      type: NUMERIC_TEXT_BOX
+      label: 'Border width'
     },
     {
+      type: TEXT_BOX,
       key: 'addArtboardBorders.borderColor',
-      label: 'Border color',
-      type: TEXT_BOX
+      label: 'Border color'
     }
   ]
 }
