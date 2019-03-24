@@ -1,8 +1,8 @@
 import {
-  getSavedUserInput,
   addLayersToPage,
   getAllArtboards,
   getAllLayers,
+  getSettings,
   showErrorMessage,
   showSuccessMessage
 } from 'sketch-plugin-helper'
@@ -21,7 +21,7 @@ export default function implementationFactory ({
     }
     const group = mapArtboards({
       artboards,
-      userInput: getSavedUserInput(),
+      settings: getSettings(),
       groupName
     })
     addLayersToPage([group])

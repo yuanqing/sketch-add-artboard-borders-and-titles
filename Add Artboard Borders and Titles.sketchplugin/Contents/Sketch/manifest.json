@@ -34,6 +34,12 @@
       "identifier": "yuanqing.sketch-add-artboard-borders-and-titles.add-artboard-titles.settings",
       "script": "plugin.js",
       "handler": "add-artboard-titles/settings"
+    },
+    {
+      "name": "Reset Settings",
+      "identifier": "yuanqing.sketch-add-artboard-borders-and-titles.reset-settings",
+      "script": "plugin.js",
+      "handler": "reset-settings"
     }
   ],
   "menu": {
@@ -41,11 +47,14 @@
     "items": [
       "yuanqing.sketch-add-artboard-borders-and-titles.add-artboard-borders.add-artboard-borders",
       "yuanqing.sketch-add-artboard-borders-and-titles.add-artboard-titles.add-artboard-titles",
+      "-",
       {
         "title": "Settings",
         "items": [
           "yuanqing.sketch-add-artboard-borders-and-titles.add-artboard-borders.settings",
-          "yuanqing.sketch-add-artboard-borders-and-titles.add-artboard-titles.settings"
+          "yuanqing.sketch-add-artboard-borders-and-titles.add-artboard-titles.settings",
+          "-",
+          "yuanqing.sketch-add-artboard-borders-and-titles.reset-settings"
         ]
       }
     ]

@@ -1,14 +1,14 @@
-import { TEXT_BOX } from 'sketch-plugin-helper'
+import { NUMERIC_TEXT_BOX, TEXT_BOX } from 'sketch-plugin-helper'
 
 import settingsFactory from '../factory/settings-factory'
 
-const userInputConfig = {
+const settingsConfig = {
   title: 'Settings for Add Artboard Borders',
   inputs: [
     {
       key: 'addArtboardBorders.borderWidth',
       label: 'Border width',
-      type: TEXT_BOX
+      type: NUMERIC_TEXT_BOX
     },
     {
       key: 'addArtboardBorders.borderColor',
@@ -18,4 +18,4 @@ const userInputConfig = {
   ]
 }
 
-export default settingsFactory(userInputConfig)
+export default settingsFactory(settingsConfig)

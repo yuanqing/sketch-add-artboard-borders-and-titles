@@ -30,6 +30,7 @@
         "label": "Add Artboard Titles",
         "shortcut": "ctrl option cmd t"
       },
+      "-",
       {
         "Settings": [
           {
@@ -39,17 +40,22 @@
           {
             "handler": "add-artboard-titles/settings",
             "label": "Settings for Add Artboard Titles"
+          },
+          "-",
+          {
+            "handler": "reset-settings",
+            "label": "Reset Settings"
           }
         ]
       }
     ],
-    "defaults": {
-      "addArtboardBorders.borderColor": "#000000",
+    "defaultSettings": {
+      "addArtboardBorders.borderColor": "#7f7f7f",
       "addArtboardBorders.borderWidth": 2,
       "addArtboardTitles.font": "Helvetica",
       "addArtboardTitles.fontSize": 24,
       "addArtboardTitles.lineHeight": 32,
-      "addArtboardTitles.verticalOffset": 16
+      "addArtboardTitles.verticalSpace": 16
     }
   }
 }

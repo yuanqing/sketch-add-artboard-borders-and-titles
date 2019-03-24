@@ -1,14 +1,14 @@
 import implementationFactory from '../factory/implementation-factory'
 
-function createArtboardTitles ({ artboards, userInput, groupName }) {
+function createArtboardTitles ({ artboards, settings, groupName }) {
   const newLayers = []
   artboards.forEach(function (artboard) {
     const artboardName = artboard.name
     const artboardFrame = artboard.frame
     const textLayer = MSTextLayer.alloc().initWithFrame(NSMakeRect(0, 0, 0, 0))
-    textLayer.setFontPostscriptName(userInput['addArtboardTitles.font'])
-    textLayer.setFontSize(userInput['addArtboardTitles.fontSize'])
-    textLayer.setLineHeight(userInput['addArtboardTitles.lineHeight'])
+    textLayer.setFontPostscriptName(settings['addArtboardTitles.font'])
+    textLayer.setFontSize(settings['addArtboardTitles.fontSize'])
+    textLayer.setLineHeight(settings['addArtboardTitles.lineHeight'])
     textLayer.setStringValue(artboardName)
     textLayer.setName(artboardName)
     textLayer.setIsLocked(true)
@@ -22,7 +22,7 @@ function createArtboardTitles ({ artboards, userInput, groupName }) {
       .setY(
         artboardFrame.y -
           textLayer.frame().height() -
-          parseInt(userInput['addArtboardTitles.verticalOffset'], 10)
+          parseInt(settings['addArtboardTitles.verticalSpace'], 10)
       )
     newLayers.push(textLayer)
   })

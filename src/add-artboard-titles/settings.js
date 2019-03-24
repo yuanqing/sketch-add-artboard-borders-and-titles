@@ -1,8 +1,8 @@
-import { TEXT_BOX } from 'sketch-plugin-helper'
+import { NUMERIC_TEXT_BOX, TEXT_BOX } from 'sketch-plugin-helper'
 
 import settingsFactory from '../factory/settings-factory'
 
-const userInputConfig = {
+const settingsConfig = {
   title: 'Setings for Add Artboard Titles',
   inputs: [
     {
@@ -13,19 +13,19 @@ const userInputConfig = {
     {
       key: 'addArtboardTitles.fontSize',
       label: 'Font size',
-      type: TEXT_BOX
+      type: NUMERIC_TEXT_BOX
     },
     {
       key: 'addArtboardTitles.lineHeight',
       label: 'Line-height',
-      type: TEXT_BOX
+      type: NUMERIC_TEXT_BOX
     },
     {
-      key: 'addArtboardTitles.verticalOffset',
-      label: 'Vertical offset',
-      type: TEXT_BOX
+      key: 'addArtboardTitles.verticalSpace',
+      label: 'Vertical space',
+      type: NUMERIC_TEXT_BOX
     }
   ]
 }
 
-export default settingsFactory(userInputConfig)
+export default settingsFactory(settingsConfig)
