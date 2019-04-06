@@ -12,7 +12,7 @@ export default function implementationFactory ({
   groupName,
   successMessage
 }) {
-  return function () {
+  return function ({ settings }) {
     deleteLayers(groupName)
     const artboards = getAllArtboards()
     if (artboards.length === 0) {
@@ -21,7 +21,7 @@ export default function implementationFactory ({
     }
     const group = mapArtboards({
       artboards,
-      settings: getSettings(),
+      settings: settings || getSettings(),
       groupName
     })
     addLayersToPage([group])
