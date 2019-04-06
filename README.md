@@ -1,4 +1,4 @@
-# sketch-add-artboard-borders-and-titles
+# Add Artboard Borders and Titles
 
 > A Sketch plugin to automatically add borders and titles to artboards
 
