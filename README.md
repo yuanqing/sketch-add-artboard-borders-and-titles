@@ -28,8 +28,8 @@ Vertical offset (pixels) | `16`
 
 ## Installation
 
-1. [Download and unzip the latest release.](https://github.com/yuanqing/sketch-add-artboard-borders-and-titles/releases)
-2. Double-click `Add Artboard Borders and Titles.sketchplugin` to install.
+1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-add-artboard-borders-and-titles/releases)
+2. Double-click `Add Artboard Borders and Titles.sketchplugin` to install
 
 ## License
 
