@@ -1,7 +1,7 @@
 import {
-  addLayersToPage,
-  getAllArtboards,
-  getAllLayers,
+  addLayersToCurrentPage,
+  getArtboardsOnCurrentPage,
+  getLayersOnCurrentPage,
   getSettings,
   showErrorMessage,
   showSuccessMessage
@@ -14,7 +14,7 @@ export default function implementationFactory ({
 }) {
   return function ({ settings }) {
     deleteLayers(groupName)
-    const artboards = getAllArtboards()
+    const artboards = getArtboardsOnCurrentPage()
     if (artboards.length === 0) {
       showErrorMessage('No artboards')
       return
@@ -24,13 +24,13 @@ export default function implementationFactory ({
       settings: settings || getSettings(),
       groupName
     })
-    addLayersToPage([group])
+    addLayersToCurrentPage([group])
     showSuccessMessage(successMessage)
   }
 }
 
 function deleteLayers (layerName) {
-  getAllLayers().forEach(function (layer) {
+  getLayersOnCurrentPage().forEach(function (layer) {
     if (layer.type === 'Group' && layer.name === layerName) {
       layer.remove()
     }
