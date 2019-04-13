@@ -11,9 +11,9 @@ function createArtboardBorders ({ artboards, settings, groupName }) {
     const style = MSStyle.alloc().init()
     const border = style.addStylePartOfType(1)
     border.color = MSImmutableColor.colorWithSVGString(
-      settings['addArtboardBorders.borderColor']
+      settings.borderColor
     )
-    border.thickness = settings['addArtboardBorders.borderWidth']
+    border.thickness = settings.borderWidth
     border.position = 2
     rectangleShape.setStyle(style)
     newLayers.push(rectangleShape)

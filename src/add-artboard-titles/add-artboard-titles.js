@@ -6,9 +6,9 @@ function createArtboardTitles ({ artboards, settings, groupName }) {
     const artboardName = artboard.name
     const artboardFrame = artboard.frame
     const textLayer = MSTextLayer.alloc().initWithFrame(NSMakeRect(0, 0, 0, 0))
-    textLayer.setFontPostscriptName(settings['addArtboardTitles.font'])
-    textLayer.setFontSize(settings['addArtboardTitles.fontSize'])
-    textLayer.setLineHeight(settings['addArtboardTitles.lineHeight'])
+    textLayer.setFontPostscriptName(settings.titleFont)
+    textLayer.setFontSize(settings.titleFontSize)
+    textLayer.setLineHeight(settings.titleLineHeight)
     textLayer.setStringValue(artboardName)
     textLayer.setName(artboardName)
     textLayer.setIsLocked(true)
@@ -22,7 +22,7 @@ function createArtboardTitles ({ artboards, settings, groupName }) {
       .setY(
         artboardFrame.y -
           textLayer.frame().height() -
-          parseInt(settings['addArtboardTitles.verticalSpace'], 10)
+          parseInt(settings.titleVerticalSpace, 10)
       )
     newLayers.push(textLayer)
   })
