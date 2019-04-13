@@ -1,6 +1,15 @@
 {
-  "private": true,
+  "name": "sketch-add-artboard-borders-and-titles",
   "version": "0.7.1",
+  "description": "A Sketch plugin to automatically add borders and titles to artboards",
+  "keywords": [
+    "plugin",
+    "sketch",
+    "sketch-plugin-helper"
+  ],
+  "license": "MIT",
+  "author": "Lim Yuan Qing",
+  "repository": "yuanqing/sketch-add-artboard-borders-and-titles",
   "devDependencies": {
     "sketch-plugin-helper": "*"
   },
@@ -15,11 +24,7 @@
     "watch": "sph build --watch"
   },
   "sketch-plugin-helper": {
-    "pluginName": "Add Artboard Borders and Titles",
-    "pluginDescription": "A Sketch plugin to automatically add borders and titles to artboards",
-    "authorName": "Lim Yuan Qing",
-    "githubUserName": "yuanqing",
-    "githubRepositoryName": "sketch-add-artboard-borders-and-titles",
+    "name": "Add Artboard Borders and Titles",
     "menu": [
       {
         "handler": "add-artboard-borders/add-artboard-borders",
@@ -49,12 +54,12 @@
       }
     ],
     "defaultSettings": {
-      "addArtboardBorders.borderColor": "#7f7f7f",
-      "addArtboardBorders.borderWidth": 2,
-      "addArtboardTitles.font": "Helvetica",
-      "addArtboardTitles.fontSize": 24,
-      "addArtboardTitles.lineHeight": 32,
-      "addArtboardTitles.verticalSpace": 16
+      "borderColor": "#7f7f7f",
+      "borderWidth": 2,
+      "titleFont": "Helvetica",
+      "titleFontSize": 24,
+      "titleLineHeight": 32,
+      "titleVerticalSpace": 16
     }
   }
 }
