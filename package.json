@@ -54,12 +54,12 @@
       }
     ],
     "defaultSettings": {
-      "borderColor": "#7f7f7f",
-      "borderWidth": 2,
-      "titleFont": "Helvetica",
-      "titleFontSize": 24,
-      "titleLineHeight": 32,
-      "titleVerticalSpace": 16
+      "addArtboardBorders.borderColor": "#7f7f7f",
+      "addArtboardBorders.borderWidth": 2,
+      "addArtboardTitles.font": "Helvetica",
+      "addArtboardTitles.fontSize": 24,
+      "addArtboardTitles.lineHeight": 32,
+      "addArtboardTitles.verticalSpace": 16
     }
   }
 }

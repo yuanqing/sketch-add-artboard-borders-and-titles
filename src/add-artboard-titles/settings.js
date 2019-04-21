@@ -7,22 +7,22 @@ const settingsConfig = {
   inputs: [
     {
       type: TEXT_BOX,
-      key: 'titleFont',
+      key: 'addArtboardTitles.font',
       label: 'Font'
     },
     {
       type: NUMERIC_TEXT_BOX,
-      key: 'titleFontSize',
+      key: 'addArtboardTitles.fontSize',
       label: 'Font size'
     },
     {
       type: NUMERIC_TEXT_BOX,
-      key: 'titleLineHeight',
+      key: 'addArtboardTitles.lineHeight',
       label: 'Line-height'
     },
     {
       type: NUMERIC_TEXT_BOX,
-      key: 'titleVerticalSpace',
+      key: 'addArtboardTitles.verticalSpace',
       label: 'Vertical space'
     }
   ]

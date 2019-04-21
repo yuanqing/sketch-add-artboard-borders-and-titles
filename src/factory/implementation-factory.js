@@ -10,6 +10,7 @@ import {
 export default function implementationFactory ({
   mapArtboards,
   groupName,
+  settingsKeyPrefix,
   successMessage
 }) {
   return function ({ settings }) {
@@ -19,11 +20,16 @@ export default function implementationFactory ({
       showErrorMessage('No artboards')
       return
     }
-    const group = mapArtboards({
+    const layers = mapArtboards({
       artboards,
-      settings: settings || getSettings(),
+      settings: settings || getSettings({ keyPrefix: settingsKeyPrefix }),
       groupName
     })
+    const group = MSLayerGroup.groupWithLayers(
+      MSLayerArray.arrayWithLayers(layers)
+    )
+    group.setName(groupName)
+    group.setIsLocked(true)
     addLayersToCurrentPage([group])
     showSuccessMessage(successMessage)
   }

@@ -7,12 +7,12 @@ const settingsConfig = {
   inputs: [
     {
       type: NUMERIC_TEXT_BOX,
-      key: 'borderWidth',
+      key: 'addArtboardBorders.borderWidth',
       label: 'Border width'
     },
     {
       type: TEXT_BOX,
-      key: 'borderColor',
+      key: 'addArtboardBorders.borderColor',
       label: 'Border color'
     }
   ]

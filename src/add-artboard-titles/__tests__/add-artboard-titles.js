@@ -7,10 +7,10 @@ snapshotTest(
   '__fixtures__/output.sketch',
   function () {
     const settings = {
-      'titleFont': 'Helvetica',
-      'titleFontSize': 24,
-      'titleLineHeight': 32,
-      'titleVerticalSpace': 16
+      font: 'Helvetica',
+      fontSize: 24,
+      lineHeight: 32,
+      verticalSpace: 16
     }
     addArtboardTitles({ settings })
   }

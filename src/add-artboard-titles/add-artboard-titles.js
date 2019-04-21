@@ -1,14 +1,20 @@
 import implementationFactory from '../factory/implementation-factory'
 
-function createArtboardTitles ({ artboards, settings, groupName }) {
-  const newLayers = []
-  artboards.forEach(function (artboard) {
+export default implementationFactory({
+  mapArtboards,
+  groupName: '@ArtboardTitles',
+  settingsKeyPrefix: 'addArtboardTitles',
+  successMessage: 'Added artboard titles'
+})
+
+function mapArtboards ({ artboards, settings }) {
+  return artboards.map(function (artboard) {
     const artboardName = artboard.name
     const artboardFrame = artboard.frame
     const textLayer = MSTextLayer.alloc().initWithFrame(NSMakeRect(0, 0, 0, 0))
-    textLayer.setFontPostscriptName(settings.titleFont)
-    textLayer.setFontSize(settings.titleFontSize)
-    textLayer.setLineHeight(settings.titleLineHeight)
+    textLayer.setFontPostscriptName(settings.font)
+    textLayer.setFontSize(settings.fontSize)
+    textLayer.setLineHeight(settings.lineHeight)
     textLayer.setStringValue(artboardName)
     textLayer.setName(artboardName)
     textLayer.setIsLocked(true)
@@ -22,19 +28,8 @@ function createArtboardTitles ({ artboards, settings, groupName }) {
       .setY(
         artboardFrame.y -
           textLayer.frame().height() -
-          parseInt(settings.titleVerticalSpace, 10)
+          parseInt(settings.verticalSpace, 10)
       )
-    newLayers.push(textLayer)
+    return textLayer
   })
-  const layerArray = MSLayerArray.arrayWithLayers(newLayers)
-  const layerGroup = MSLayerGroup.groupWithLayers(layerArray)
-  layerGroup.setName(groupName)
-  layerGroup.setIsLocked(true)
-  return layerGroup
 }
-
-export default implementationFactory({
-  mapArtboards: createArtboardTitles,
-  groupName: '@ArtboardTitles',
-  successMessage: 'Added artboard titles'
-})
