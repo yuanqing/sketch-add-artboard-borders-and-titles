@@ -54,12 +54,16 @@
       }
     ],
     "defaultSettings": {
-      "addArtboardBorders.borderColor": "#7f7f7f",
-      "addArtboardBorders.borderWidth": 2,
-      "addArtboardTitles.font": "Helvetica",
-      "addArtboardTitles.fontSize": 24,
-      "addArtboardTitles.lineHeight": 32,
-      "addArtboardTitles.verticalSpace": 16
+      "addArtboardBorders": {
+        "borderColor": "#7f7f7f",
+        "borderWidth": 2
+      },
+      "addArtboardTitles": {
+        "font": "Helvetica",
+        "fontSize": 24,
+        "lineHeight": 32,
+        "verticalSpace": 16
+      }
     }
   }
 }

@@ -3,7 +3,7 @@ import implementationFactory from '../factory/implementation-factory'
 export default implementationFactory({
   mapArtboards,
   groupName: '@ArtboardTitles',
-  settingsKeyPrefix: 'addArtboardTitles',
+  settingsKey: 'addArtboardTitles',
   successMessage: 'Added artboard titles'
 })
 

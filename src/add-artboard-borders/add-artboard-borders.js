@@ -3,7 +3,7 @@ import implementationFactory from '../factory/implementation-factory'
 export default implementationFactory({
   mapArtboards,
   groupName: '@ArtboardBorders',
-  settingsKeyPrefix: 'addArtboardBorders',
+  settingsKey: 'addArtboardBorders',
   successMessage: 'Added artboard borders'
 })
 

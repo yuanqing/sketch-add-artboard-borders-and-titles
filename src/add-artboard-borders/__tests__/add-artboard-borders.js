@@ -7,8 +7,10 @@ snapshotTest(
   '__fixtures__/output.sketch',
   function () {
     const settings = {
-      borderColor: '#7f7f7f',
-      borderWidth: 2
+      addArtboardBorders: {
+        borderColor: '#7f7f7f',
+        borderWidth: 2
+      }
     }
     addArtboardBorders({ settings })
   }

@@ -10,7 +10,7 @@ import {
 export default function implementationFactory ({
   mapArtboards,
   groupName,
-  settingsKeyPrefix,
+  settingsKey,
   successMessage
 }) {
   return function ({ settings }) {
@@ -22,7 +22,7 @@ export default function implementationFactory ({
     }
     const layers = mapArtboards({
       artboards,
-      settings: settings || getSettings({ keyPrefix: settingsKeyPrefix }),
+      settings: (settings || getSettings())[settingsKey],
       groupName
     })
     const group = MSLayerGroup.groupWithLayers(
