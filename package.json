@@ -10,9 +10,6 @@
   "license": "MIT",
   "author": "Lim Yuan Qing",
   "repository": "yuanqing/sketch-add-artboard-borders-and-titles",
-  "devDependencies": {
-    "sketch-plugin-helper": "*"
-  },
   "scripts": {
     "build": "sph build",
     "fix": "sph lint --fix",
@@ -22,6 +19,9 @@
     "unlink": "sph symlink --delete",
     "version": "sph version",
     "watch": "sph build --watch"
+  },
+  "devDependencies": {
+    "sketch-plugin-helper": "*"
   },
   "sketch-plugin-helper": {
     "name": "Add Artboard Borders and Titles",
