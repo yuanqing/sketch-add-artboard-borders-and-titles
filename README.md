@@ -23,7 +23,7 @@ Border width (pixels) | `2`
 
 Settings | Default
 :--|:--
-Font | `Helvetica`
+Font | `SF UI Text Medium`
 Font size (pixels) | `24`
 Line height (pixels) | `32`
 Vertical offset (pixels) | `16`

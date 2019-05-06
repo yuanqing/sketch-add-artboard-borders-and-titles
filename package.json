@@ -59,7 +59,7 @@
         "borderWidth": 2
       },
       "addArtboardTitles": {
-        "font": "Helvetica",
+        "font": "SF UI Text Medium",
         "fontSize": 24,
         "lineHeight": 32,
         "verticalSpace": 16
