@@ -2,13 +2,15 @@
 
 > A Sketch plugin to automatically add borders and titles to artboards
 
-- Useful for preparing UX specifications for documentation or for print
+- Useful for preparing UX specifications for hand-off or for print
 
-## Usage
+![Add Artboard Titles](media/add-artboard-titles.gif)
+
+## Commands
 
 ### Add Artboard Borders
 
-- Draws borders around all artboards on the current page
+- Draw borders around all artboards on the current page
 
 Settings | Default
 :--|:--
@@ -17,7 +19,7 @@ Border width (pixels) | `2`
 
 ### Add Artboard Titles
 
-- Adds titles above all artboards on the current page
+- Add titles above all artboards on the current page
 
 Settings | Default
 :--|:--
