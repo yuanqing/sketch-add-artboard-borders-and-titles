@@ -10,7 +10,7 @@
 
 ### Add Artboard Borders
 
-- Draw borders around all artboards on the current page
+- Draws borders around all artboards on the current page
 
 Settings | Default
 :--|:--
@@ -19,7 +19,7 @@ Border width (pixels) | `1`
 
 ### Add Artboard Titles
 
-- Add titles above all artboards on the current page
+- Adds titles above all artboards on the current page
 
 Settings | Default
 :--|:--
