@@ -14,8 +14,8 @@
 
 Settings | Default
 :--|:--
-Border color (hex code) | `#000000`
-Border width (pixels) | `2`
+Border color (hex code) | `#7f7f7f`
+Border width (pixels) | `1`
 
 ### Add Artboard Titles
 

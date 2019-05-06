@@ -56,7 +56,7 @@
     "defaultSettings": {
       "addArtboardBorders": {
         "borderColor": "#7f7f7f",
-        "borderWidth": 2
+        "borderWidth": 1
       },
       "addArtboardTitles": {
         "font": "SF UI Text Medium",
