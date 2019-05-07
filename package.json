@@ -10,6 +10,9 @@
   "license": "MIT",
   "author": "Lim Yuan Qing",
   "repository": "yuanqing/sketch-add-artboard-borders-and-titles",
+  "files": [
+    "src"
+  ],
   "scripts": {
     "build": "sph build",
     "fix": "sph lint --fix",
