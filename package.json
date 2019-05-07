@@ -1,6 +1,6 @@
 {
   "name": "sketch-add-artboard-borders-and-titles",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "A Sketch plugin to automatically add borders and titles to artboards",
   "keywords": [
     "plugin",
