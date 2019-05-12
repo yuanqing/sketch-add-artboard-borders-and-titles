@@ -1,5 +1,5 @@
 import {
-  addLayersToCurrentPage,
+  addLayersToPage,
   getArtboardsOnCurrentPage,
   getLayersOnCurrentPage,
   getSettings,
@@ -30,7 +30,7 @@ export default function implementationFactory ({
     )
     group.setName(groupName)
     group.setIsLocked(true)
-    addLayersToCurrentPage([group])
+    addLayersToPage([group])
     showSuccessMessage(successMessage)
   }
 }
