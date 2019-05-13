@@ -4,7 +4,7 @@ import addArtboardBorders from '../add-artboard-borders'
 test(
   'Add artboard borders',
   '__fixtures__/input.sketch',
-  '__fixtures__/output.sketch',
+  '__fixtures__/expected-output.sketch',
   function () {
     const settings = {
       addArtboardBorders: {

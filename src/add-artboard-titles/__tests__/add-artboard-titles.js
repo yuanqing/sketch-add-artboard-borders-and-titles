@@ -4,7 +4,7 @@ import addArtboardTitles from '../add-artboard-titles'
 test(
   'Add artboard titles',
   '__fixtures__/input.sketch',
-  '__fixtures__/output.sketch',
+  '__fixtures__/expected-output.sketch',
   function () {
     const settings = {
       addArtboardTitles: {
