@@ -1,7 +1,7 @@
-import { snapshotTest } from 'sketch-plugin-helper'
+import { test } from 'sketch-plugin-helper'
 import addArtboardTitles from '../add-artboard-titles'
 
-snapshotTest(
+test(
   'Add artboard titles',
   '__fixtures__/input.sketch',
   '__fixtures__/output.sketch',

@@ -1,7 +1,7 @@
-import { snapshotTest } from 'sketch-plugin-helper'
+import { test } from 'sketch-plugin-helper'
 import addArtboardBorders from '../add-artboard-borders'
 
-snapshotTest(
+test(
   'Add artboard borders',
   '__fixtures__/input.sketch',
   '__fixtures__/output.sketch',
