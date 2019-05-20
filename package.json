@@ -14,44 +14,45 @@
     "src"
   ],
   "scripts": {
-    "build": "sph build",
-    "fix": "sph lint --fix",
-    "lint": "sph lint",
-    "symlink": "sph symlink",
-    "test": "sph test",
-    "unlink": "sph symlink --delete",
-    "version": "sph version",
-    "watch": "sph build --watch"
+    "build": "sketch build",
+    "fix": "sketch lint --fix",
+    "handler": "sketch handler",
+    "lint": "sketch lint",
+    "symlink": "sketch symlink",
+    "test": "sketch test",
+    "unlink": "sketch symlink --delete",
+    "version": "sketch version",
+    "watch": "sketch build --watch"
   },
   "devDependencies": {
     "sketch-plugin-helper": "*"
   },
   "sketch-plugin-helper": {
-    "name": "Add Artboard Borders and Titles",
+    "displayName": "Add Artboard Borders and Titles",
     "menu": [
       {
         "handler": "add-artboard-borders/add-artboard-borders",
-        "label": "Add Artboard Borders"
+        "name": "Add Artboard Borders"
       },
       {
         "handler": "add-artboard-titles/add-artboard-titles",
-        "label": "Add Artboard Titles"
+        "name": "Add Artboard Titles"
       },
       "-",
       {
         "Settings": [
           {
             "handler": "add-artboard-borders/settings",
-            "label": "Settings for Add Artboard Borders"
+            "name": "Settings for Add Artboard Borders"
           },
           {
             "handler": "add-artboard-titles/settings",
-            "label": "Settings for Add Artboard Titles"
+            "name": "Settings for Add Artboard Titles"
           },
           "-",
           {
             "handler": "reset-settings",
-            "label": "Reset Settings"
+            "name": "Reset Settings"
           }
         ]
       }

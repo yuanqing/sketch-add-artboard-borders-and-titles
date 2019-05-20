@@ -4,7 +4,7 @@ import settingsFactory from '../factory/settings-factory'
 
 const settingsConfig = {
   title: 'Settings for Add Artboard Borders',
-  inputs: [
+  formFields: [
     {
       type: NUMERIC_TEXT_BOX,
       key: 'addArtboardBorders.borderWidth',

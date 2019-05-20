@@ -4,7 +4,7 @@ import settingsFactory from '../factory/settings-factory'
 
 const settingsConfig = {
   title: 'Setings for Add Artboard Titles',
-  inputs: [
+  formFields: [
     {
       type: TEXT_BOX,
       key: 'addArtboardTitles.font',
