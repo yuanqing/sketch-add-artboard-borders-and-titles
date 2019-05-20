@@ -29,7 +29,7 @@
     "sketch-plugin-helper": "*"
   },
   "sketch-plugin-helper": {
-    "displayName": "Add Artboard Borders and Titles",
+    "name": "Add Artboard Borders and Titles",
     "menu": [
       {
         "handler": "add-artboard-borders/add-artboard-borders",
