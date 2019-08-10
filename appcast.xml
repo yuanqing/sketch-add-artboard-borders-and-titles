@@ -2,9 +2,14 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Add Artboard Borders and Titles</title>
-    <link>https://raw.githubusercontent.com/yuanqing/sketch-add-artboard-borders-and-titles/master/appcast.xml</link>
+    <link>https://raw.githubusercontent.com/yuanqing/sketch-plugins/master/packages/sketch-add-artboard-borders-and-titles/.appcast.xml</link>
     <description>A Sketch plugin to automatically add borders and titles to artboards</description>
     <language>en</language>
+    <item>
+      <title>v0.10.0</title>
+      <description>0.10.0</description>
+      <enclosure url="https://github.com/yuanqing/sketch-plugins/releases/download/sketch-add-artboard-borders-and-titles-0.10.0/plugin.zip" sparkle:version="0.10.0"/>
+    </item>
     <item>
       <title>v0.9.0</title>
       <description>0.9.0</description>
