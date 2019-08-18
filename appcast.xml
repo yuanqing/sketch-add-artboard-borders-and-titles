@@ -6,9 +6,9 @@
     <description>A Sketch plugin to automatically add borders and titles to artboards</description>
     <language>en</language>
     <item>
-      <title>v0.10.0</title>
-      <description>0.10.0</description>
-      <enclosure url="https://github.com/yuanqing/sketch-plugins/releases/download/sketch-add-artboard-borders-and-titles-0.10.0/plugin.zip" sparkle:version="0.10.0"/>
+      <title>v1.0.4</title>
+      <description>1.0.4</description>
+      <enclosure url="https://github.com/yuanqing/sketch-plugins/releases/download/sketch-add-artboard-borders-and-titles-1.0.4/plugin.zip" sparkle:version="1.0.4"/>
     </item>
     <item>
       <title>v0.9.0</title>
